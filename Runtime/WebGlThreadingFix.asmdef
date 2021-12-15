@@ -1,6 +1,6 @@
 {
     "name": "WebGLThreadingFix",
-    "rootNamespace": "TransformsAI.WebGLThreadingFix",
+    "rootNamespace": "TransformsAI.Unity.WebGL",
     "references": [],
     "includePlatforms": [
         "Editor",

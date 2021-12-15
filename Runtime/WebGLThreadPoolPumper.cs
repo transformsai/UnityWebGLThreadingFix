@@ -6,7 +6,7 @@ using UnityEngine.Scripting;
 
 [assembly:AlwaysLinkAssembly]
 
-namespace TransformsAI.WebGLThreadingFix
+namespace TransformsAI.Unity.WebGL
 {
     [Preserve]
     public static class WebGlThreadPoolPumper
@@ -27,6 +27,9 @@ namespace TransformsAI.WebGLThreadingFix
         private static void Pump(object dispatchMethod)
         {
             var method = (Func<bool>)dispatchMethod;
+
+            //todo: find a way to interrupt execution context if work exceeds quantum
+            // ReSharper disable once UnusedVariable
             var didFinishWork = method();
             SynchronizationContext.Current.Post(Pump, dispatchMethod);
         }
