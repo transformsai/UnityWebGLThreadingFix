@@ -1,0 +1,3 @@
+<linker>
+    <assembly fullname="TransformsAI.Unity.WebGL" preserve="all"/>
+</linker>
